@@ -35,6 +35,58 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+                                    <plugin>
+                <groupId>org.panteleyev</groupId>
+                <artifactId>jpackage-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <configuration>
+                    <name>HelloSpringBoot</name>
+                    <appVersion>${project.version}</appVersion>
+                    <vendor>Stony Brook University - Biomedical Informatics</vendor>
+                    <input>target</input>
+                    <mainJar>demo-${project.version}.jar</mainJar>
+                    <verbose>true</verbose>
+                    <description>Hello Spring Boot</description>
+                    <destination>dist</destination>
+                    <javaOptions>
+                        <option>-Dfile.encoding=UTF-8</option>
+                    </javaOptions>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>win</id>
+                        <configuration>
+                            <installDir>\HelloSpringBoot</installDir>
+                            <winMenu>true</winMenu>
+                            <winShortcutPrompt>true</winShortcutPrompt>
+                            <winDirChooser>true</winDirChooser>
+                            <winConsole>true</winConsole>
+                            <type>MSI</type>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>mac</id>
+                        <configuration>
+                            <installDir>/Applications</installDir>
+                            <type>DMG</type>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>ubuntu</id>
+                        <configuration>
+                            <installDir>/usr/local</installDir>
+                            <type>DEB</type>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>rhel</id>
+                        <configuration>
+                            <installDir>/usr/local</installDir>
+                            <type>RPM</type>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 	</build>
 
