@@ -12,7 +12,5 @@ mvn clean package
 ## Build Mac app
 
 ```sh
-mvn clean package jpackage:jpackage@mac
-# or
 mvn jpackage:jpackage@mac
 ```
