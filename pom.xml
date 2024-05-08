@@ -42,7 +42,7 @@
                 <configuration>
                     <name>HelloSpringBoot</name>
                     <appVersion>${project.version}</appVersion>
-                    <vendor>Stony Brook University - Biomedical Informatics</vendor>
+                    <vendor>Testing</vendor>
                     <input>target</input>
                     <mainJar>demo-${project.version}.jar</mainJar>
                     <verbose>true</verbose>
