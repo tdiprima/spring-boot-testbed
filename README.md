@@ -1,4 +1,4 @@
-# hello-spring-boot
+# spring-boot-testbed
 
 1. Run DemoApplication.java
 2. Go to http://localhost:8080/
@@ -27,3 +27,5 @@ jpackage \
 --main-jar demo-1.0.0.jar \
 --java-options -Dfile.encoding=UTF-8
 ```
+
+<br>
