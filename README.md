@@ -3,10 +3,18 @@
 1. Run DemoApplication.java
 2. Go to http://localhost:8080/
 
+Or:
+
 ## Build jar
 
 ```sh
 mvn clean package
+```
+
+## Run jar
+
+```sh
+java -jar target/demo-1.0.0.jar
 ```
 
 ## Build Mac app
