@@ -36,4 +36,7 @@ jpackage \
 --java-options -Dfile.encoding=UTF-8
 ```
 
-<br>
+---
+
+This project may include third-party open-source code, subject to its original licenses.<br>
+If there is a licensing concern, please open an issue.
